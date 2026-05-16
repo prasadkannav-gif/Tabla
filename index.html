@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prasad Kannav - Indian Classical Tabla Player & Teacher</title>
+    <!-- Tailwind CSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Playfair Display for headings, Inter for body -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            /* Beautiful rich colour gradient (plum to indigo) with an ornate Indian pattern design background */
+            background-color: #1a0b2e;
+            background-image: linear-gradient(135deg, rgba(74, 20, 40, 0.90) 0%, rgba(20, 15, 50, 0.94) 100%), url('https://images.unsplash.com/photo-1583145657805-728b7e7a5eb1?q=80&w=2070&auto=format&fit=crop');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            color: #f3f4f6;
+        }
+        
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(212, 175, 55, 0.15);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .gold-text {
+            color: #D4AF37;
+        }
+        
+        .gold-border {
+            border-color: #D4AF37;
+        }
+
+        .btn-gold {
+            background-color: transparent;
+            border: 2px solid #D4AF37;
+            color: #D4AF37;
+            transition: all 0.3s ease;
+        }
+
+        .btn-gold:hover {
+            background-color: #D4AF37;
+            color: #111827;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px rgba(212, 175, 55, 0.3);
+        }
+
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Image placeholder hover effect */
+        .img-placeholder {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .img-placeholder:hover {
+            transform: scale(1.02);
+            box-shadow: 0 10px 15px rgba(0,0,0,0.5);
+        }
+    </style>
+</head>
+<body class="antialiased min-h-screen flex flex-col">
+
+    <!-- Navigation -->
+    <header class="fixed w-full z-50 glass-panel shadow-lg transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center cursor-pointer" onclick="window.scrollTo(0,0)">
+                    <span class="font-playfair text-2xl font-bold gold-text tracking-wider">Prasad Kannav</span>
+                </div>
+                <!-- Desktop Menu -->
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#about" class="text-gray-300 hover:text-white transition duration-300 text-sm uppercase tracking-wide">About</a>
+                    <a href="#classes" class="text-gray-300 hover:text-white transition duration-300 text-sm uppercase tracking-wide">Classes</a>
+                    <a href="#gallery" class="text-gray-300 hover:text-white transition duration-300 text-sm uppercase tracking-wide">Gallery</a>
+                    <a href="#testimonials" class="text-gray-300 hover:text-white transition duration-300 text-sm uppercase tracking-wide">Testimonials</a>
+                    <a href="#contact" class="text-gray-300 hover:text-white transition duration-300 text-sm uppercase tracking-wide">Contact</a>
+                </nav>
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-300 hover:text-white focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="hidden md:hidden glass-panel border-t border-yellow-600/20">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-800">About</a>
+                <a href="#classes" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-800">Classes</a>
+                <a href="#gallery" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-800">Gallery</a>
+                <a href="#testimonials" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-800">Testimonials</a>
+                <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-800">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden flex-grow flex items-center" id="home">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <h1 class="text-5xl md:text-7xl font-bold mb-6 tracking-tight">
+                Master the Rhythm of <br/>
+                <span class="gold-text italic">Indian Classical Tabla</span>
+            </h1>
+            <p class="mt-4 text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto font-light leading-relaxed mb-10">
+                Join Prasad Kannav, a profound maestro with 30+ years of experience, on a musical journey from Banaras Gharana to the world.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#contact" class="px-8 py-4 rounded-full font-semibold uppercase tracking-wider bg-yellow-600 hover:bg-yellow-500 text-white transition duration-300 shadow-lg hover:shadow-yellow-600/50">Start Learning Now</a>
+                <a href="#about" class="btn-gold px-8 py-4 rounded-full font-semibold uppercase tracking-wider">Discover My Journey</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-rose-950/20 backdrop-blur-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-bold gold-text mb-4">About Prasad Kannav</h2>
+                <div class="h-1 w-24 bg-yellow-600 mx-auto rounded"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="glass-panel p-2 rounded-2xl shadow-2xl relative group overflow-hidden">
+                    <!-- EDITABLE: Update src to your main portrait -->
+                    <img src="./images/prasad-kannav-playing-tabla.jpeg" alt="Prasad Kannav playing Tabla" class="w-full h-auto rounded-xl object-cover aspect-[4/3] img-placeholder">
+                    <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl">
+                        <span class="text-white border border-white px-4 py-2 rounded uppercase text-sm tracking-wider">Replace with your photo</span>
+                    </div>
+                </div>
+                
+                <div class="space-y-6 text-gray-300 text-lg leading-relaxed">
+                    <p>
+                        I am Prasad Kannav, an Indian classical tabla player and a profound tabla teacher with over <span class="gold-text font-semibold">30 years of experience</span> in the field. My journey with rhythm began at the tender age of three.
+                    </p>
+                    <p>
+                        Throughout my career, I have had the privilege of delivering numerous tabla solo performances in prestigious musical concerts and festivals, including the Hindu Sammelan.
+                    </p>
+                    <p>
+                        I am a proud disciple of <span class="gold-text font-semibold">Pandit Arvind Kumar Azad Ji</span>, a stalwart of tabla from the revered <em>Banaras Gharana</em>. Under his guidance, I have gained invaluable knowledge over the years, which I now passionately impart to my students.
+                    </p>
+                    <p>
+                        My mission is to share the rich heritage of Indian rhythm. I teach online and offline through my own classes and also dedicate time to teaching at the Blind School. I prepare my students comprehensively, ensuring they are ready to excel in official tabla examinations.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Classes Section -->
+    <section id="classes" class="py-20 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-bold gold-text mb-4">Tabla Classes</h2>
+                <p class="text-xl text-gray-300 max-w-2xl mx-auto">Now accepting students globally. Learn the intricacies of the Banaras Gharana from anywhere in the world.</p>
+                <div class="h-1 w-24 bg-yellow-600 mx-auto rounded mt-6"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Class Card 1 -->
+                <div class="glass-panel rounded-2xl p-8 hover:-translate-y-2 transition duration-300 text-center border-t-4 border-t-yellow-600">
+                    <div class="w-16 h-16 mx-auto bg-gray-800 rounded-full flex items-center justify-center mb-6 shadow-inner">
+                        <i class="fas fa-globe text-3xl gold-text"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Global Online Classes</h3>
+                    <p class="text-gray-400 mb-6">Taking my passion overseas. High-quality 1-on-1 or group online sessions via video call. Perfect for international students.</p>
+                </div>
+
+                <!-- Class Card 2 -->
+                <div class="glass-panel rounded-2xl p-8 hover:-translate-y-2 transition duration-300 text-center border-t-4 border-t-yellow-600">
+                    <div class="w-16 h-16 mx-auto bg-gray-800 rounded-full flex items-center justify-center mb-6 shadow-inner">
+                        <i class="fas fa-users text-3xl gold-text"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Offline Studio Classes</h3>
+                    <p class="text-gray-400 mb-6">Traditional face-to-face learning in a dedicated musical environment for local students seeking hands-on guidance.</p>
+                </div>
+
+                <!-- Class Card 3 -->
+                <div class="glass-panel rounded-2xl p-8 hover:-translate-y-2 transition duration-300 text-center border-t-4 border-t-yellow-600">
+                    <div class="w-16 h-16 mx-auto bg-gray-800 rounded-full flex items-center justify-center mb-6 shadow-inner">
+                        <i class="fas fa-certificate text-3xl gold-text"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Exam Preparation</h3>
+                    <p class="text-gray-400 mb-6">Structured curriculum designed to prepare students for formal federal tabla examinations and certifications.</p>
+                </div>
+            </div>
+            
+            <div class="mt-12 text-center">
+                 <p class="text-gray-300 italic mb-6">"I am also proudly teaching at the Blind School, sharing the joy of music with visually impaired students."</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section (Editable Images) -->
+    <section id="gallery" class="py-20 bg-indigo-950/20 backdrop-blur-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-bold gold-text mb-4">Performances & Memories</h2>
+                <p class="text-gray-400">Glimpses from concerts, festivals, and classes.</p>
+                <div class="h-1 w-24 bg-yellow-600 mx-auto rounded mt-6"></div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                <!-- Gallery Item 1 -->
+                <div class="relative group rounded-xl overflow-hidden glass-panel p-1">
+                    <img src="./images/hindu-sammelan.jpeg" alt="Hindu Sammelan Performance" class="w-full h-64 object-cover rounded-lg img-placeholder">
+                    <div class="absolute inset-0 bg-black bg-opacity-70 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 m-1 rounded-lg">
+                        <p class="text-white font-playfair text-lg mb-2">Hindu Sammelan</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 2 -->
+                <div class="relative group rounded-xl overflow-hidden glass-panel p-1">
+                    <!-- EDITABLE: Update src -->
+                    <img src="images/classroom-session.jpeg" alt="Classroom Session" class="w-full h-64 object-cover rounded-lg img-placeholder">
+                    <div class="absolute inset-0 bg-black bg-opacity-70 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 m-1 rounded-lg">
+                        <p class="text-white font-playfair text-lg mb-2">Classroom Session</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 3 -->
+                <div class="relative group rounded-xl overflow-hidden glass-panel p-1">
+                    <!-- EDITABLE: Update src -->
+                    <img src="https://images.unsplash.com/photo-1507838153414-b4b713384a76?q=80&w=800&auto=format&fit=crop" alt="Solo Performance" class="w-full h-64 object-cover rounded-lg img-placeholder">
+                    <div class="absolute inset-0 bg-black bg-opacity-70 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 m-1 rounded-lg">
+                        <p class="text-white font-playfair text-lg mb-2">Solo Performance</p>
+                        <span class="text-xs text-gray-300 border border-gray-500 px-2 py-1 rounded">Update Image</span>
+                    </div>
+                </div>
+            </div>
+            <p class="text-center text-sm text-gray-500 mt-6"><i class="fas fa-info-circle mr-1"></i> Hint for you: Replace image URLs in the code to show your own photos.</p>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-20 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-bold gold-text mb-4">Student Voices</h2>
+                <div class="h-1 w-24 bg-yellow-600 mx-auto rounded"></div>
+            </div>
+
+            <!-- Testimonials Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                
+                <!-- Testimonial 1 -->
+                <div class="glass-panel p-8 rounded-2xl relative">
+                    <i class="fas fa-quote-left text-4xl text-gray-600 absolute top-4 left-4 opacity-50"></i>
+                    <div class="relative z-10 pl-8 pt-4">
+                        <!-- EDITABLE: Testimonial Text -->
+                        <p class="text-gray-300 text-lg italic mb-6 leading-relaxed">
+                            "Learning under Prasad Sir has been a transformative experience. His deep knowledge of the Banaras Gharana and his patience make him an exceptional Guru. He prepared me thoroughly for my exams."
+                        </p>
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-gray-700 rounded-full flex items-center justify-center text-xl font-bold text-yellow-600 mr-4">
+                                R
+                            </div>
+                            <div>
+                                <!-- EDITABLE: Student Name & Location -->
+                                <h4 class="font-bold text-white text-lg">Rahul S.</h4>
+                                <p class="text-gray-400 text-sm">Advanced Student, India</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="glass-panel p-8 rounded-2xl relative">
+                    <i class="fas fa-quote-left text-4xl text-gray-600 absolute top-4 left-4 opacity-50"></i>
+                    <div class="relative z-10 pl-8 pt-4">
+                        <!-- EDITABLE: Testimonial Text -->
+                        <p class="text-gray-300 text-lg italic mb-6 leading-relaxed">
+                            "I take online classes from the US. Prasad Ji's method of teaching rhythm is incredibly clear, even over video calls. His 30 years of experience truly shine through in every session."
+                        </p>
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-gray-700 rounded-full flex items-center justify-center text-xl font-bold text-yellow-600 mr-4">
+                                A
+                            </div>
+                            <div>
+                                <!-- EDITABLE: Student Name & Location -->
+                                <h4 class="font-bold text-white text-lg">Anita P.</h4>
+                                <p class="text-gray-400 text-sm">Online Student, USA</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="glass-panel p-8 rounded-2xl relative md:col-span-2 lg:col-span-1 lg:col-start-1 lg:col-end-3 xl:col-auto xl:col-span-2 max-w-4xl mx-auto w-full">
+                    <i class="fas fa-quote-left text-4xl text-gray-600 absolute top-4 left-4 opacity-50"></i>
+                    <div class="relative z-10 pl-8 pt-4">
+                        <!-- EDITABLE: Testimonial Text -->
+                        <p class="text-gray-300 text-lg italic mb-6 leading-relaxed">
+                            "His dedication to teaching at the blind school shows his true passion for music. He doesn't just teach technique; he teaches you how to feel the taal."
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 bg-gray-700 rounded-full flex items-center justify-center text-xl font-bold text-yellow-600 mr-4">
+                                    V
+                                </div>
+                                <div>
+                                    <!-- EDITABLE: Student Name & Location -->
+                                    <h4 class="font-bold text-white text-lg">Vikram M.</h4>
+                                    <p class="text-gray-400 text-sm">Parent of Student</p>
+                                </div>
+                            </div>
+                            <span class="text-xs text-gray-500"><i class="fas fa-pencil-alt mr-1"></i> Editable in code</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-rose-950/30 backdrop-blur-sm border-t border-yellow-600/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-bold gold-text mb-4">Begin Your Journey</h2>
+                <p class="text-xl text-gray-300 max-w-2xl mx-auto">"All those who are interested in learning tabla, please contact me and let's get started."</p>
+                <div class="h-1 w-24 bg-yellow-600 mx-auto rounded mt-6"></div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- Contact Information -->
+                <div class="glass-panel p-8 rounded-2xl">
+                    <h3 class="text-2xl font-bold mb-8 font-playfair border-b border-gray-700 pb-4">Contact Information</h3>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 rounded-full bg-yellow-600/20 flex items-center justify-center text-yellow-600 mr-4 flex-shrink-0">
+                                <i class="fas fa-envelope text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-sm uppercase text-gray-400 font-semibold mb-1">Email</h4>
+                                <!-- EDITABLE: Email -->
+                                <p class="text-lg text-white">prasadkannav@gmail.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 rounded-full bg-yellow-600/20 flex items-center justify-center text-yellow-600 mr-4 flex-shrink-0">
+                                <i class="fas fa-phone text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-sm uppercase text-gray-400 font-semibold mb-1">Phone / WhatsApp</h4>
+                                <!-- EDITABLE: Phone number -->
+                                <p class="text-lg text-white">+91 9970332614</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 rounded-full bg-yellow-600/20 flex items-center justify-center text-yellow-600 mr-4 flex-shrink-0">
+                                <i class="fas fa-map-marker-alt text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-sm uppercase text-gray-400 font-semibold mb-1">Location</h4>
+                                <p class="text-lg text-white">India (Available globally online)</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-10 pt-6 border-t border-gray-700">
+                        <h4 class="text-sm uppercase text-gray-400 font-semibold mb-4">Connect on Social Media</h4>
+                        <div class="flex space-x-4">
+                            <!-- EDITABLE: Social Links -->
+                            <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-white hover:bg-yellow-600 transition duration-300"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-white hover:bg-yellow-600 transition duration-300"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-white hover:bg-yellow-600 transition duration-300"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form (UI Only) -->
+                <div class="glass-panel p-8 rounded-2xl">
+                    <h3 class="text-2xl font-bold mb-8 font-playfair border-b border-gray-700 pb-4">Send a Message</h3>
+                    <form onsubmit="event.preventDefault(); showMessage();">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-gray-400 mb-2">Your Name</label>
+                                <input type="text" id="name" class="w-full bg-gray-800/50 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-yellow-600 transition duration-300" placeholder="John Doe" required>
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-400 mb-2">Email Address</label>
+                                <input type="email" id="email" class="w-full bg-gray-800/50 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-yellow-600 transition duration-300" placeholder="john@example.com" required>
+                            </div>
+                        </div>
+                        <div class="mb-6">
+                            <label for="interest" class="block text-sm font-medium text-gray-400 mb-2">I am interested in</label>
+                            <select id="interest" class="w-full bg-gray-800/50 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-yellow-600 transition duration-300 appearance-none">
+                                <option>Online Global Classes</option>
+                                <option>Offline Studio Classes</option>
+                                <option>Exam Preparation</option>
+                                <option>Other Inquiry</option>
+                            </select>
+                        </div>
+                        <div class="mb-6">
+                            <label for="message" class="block text-sm font-medium text-gray-400 mb-2">Message</label>
+                            <textarea id="message" rows="4" class="w-full bg-gray-800/50 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-yellow-600 transition duration-300" placeholder="Tell me about your experience level and goals..." required></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-yellow-600 hover:bg-yellow-500 text-white font-bold py-4 px-8 rounded-lg transition duration-300 uppercase tracking-wider shadow-lg hover:shadow-yellow-600/50">
+                            Send Inquiry
+                        </button>
+                    </form>
+                    
+                    <!-- Custom Alert Box (Hidden by default) -->
+                    <div id="success-message" class="hidden mt-4 p-4 bg-green-900/50 border border-green-500 rounded-lg text-green-200 text-center">
+                        <i class="fas fa-check-circle mr-2"></i> Thank you! I will get back to you soon.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#0f071a]/80 backdrop-blur-md py-8 border-t border-yellow-600/20 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center">
+            <div class="mb-4 md:mb-0">
+                <span class="font-playfair text-xl font-bold gold-text">Prasad Kannav</span>
+                <p class="text-sm text-gray-500 mt-1">&copy; 2026 All Rights Reserved.</p>
+            </div>
+            <div class="text-sm text-gray-500">
+                <p>Preserving the rhythm of the Banaras Gharana.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        
+        // Mobile Menu Toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu on link click
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+            });
+        });
+
+        // Navbar styling on scroll
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('bg-[#1a0b2e]/95');
+                navbar.classList.remove('glass-panel');
+            } else {
+                navbar.classList.remove('bg-[#1a0b2e]/95');
+                navbar.classList.add('glass-panel');
+            }
+        });
+
+        // Custom form submission handler (replaces alert)
+        function showMessage() {
+            const successDiv = document.getElementById('success-message');
+            successDiv.classList.remove('hidden');
+            
+            // Optional: reset form
+            document.querySelector('form').reset();
+            
+            // Hide message after 5 seconds
+            setTimeout(() => {
+                successDiv.classList.add('hidden');
+            }, 5000);
+        }
+    </script>
+</body>
+</html>
